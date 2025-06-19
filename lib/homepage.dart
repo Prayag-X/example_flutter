@@ -13,19 +13,27 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Center(child: const Text("Counter")),
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        title: Center(child: const Text("Counter")),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              _count.toString(),
+              style: TextStyle(fontSize: 60),
+            ),
+            Container(
+              height: 40,
+              width: 100,
+              color: Colors.blue,
+              child: Icon(Icons.add, color: Colors.white,),
+            ),
+          ],
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                _count.toString(),
-                style: TextStyle(fontSize: 60),
-              ),
-            ],
-          ),
-        ));
+      ),
+    );
   }
 }
