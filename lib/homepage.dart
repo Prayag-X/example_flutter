@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: const Center(child: Text("Counter")),
+        title: const Center(child: Text("Counter", style: TextStyle(color: Colors.white),)),
       ),
       body: Center(
         child: Column(
