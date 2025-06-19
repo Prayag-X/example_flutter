@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: Center(child: const Text("Counter")),
+        title: const Center(child: Text("Counter")),
       ),
       body: Center(
         child: Column(
@@ -23,20 +23,19 @@ class _HomePageState extends State<HomePage> {
           children: [
             Text(
               _count.toString(),
-              style: TextStyle(fontSize: 60),
+              style: const TextStyle(fontSize: 60),
             ),
             GestureDetector(
               onTap: () {
                 setState(() {
                   _count++;
                 });
-                print(_count);
               },
               child: Container(
                 height: 40,
                 width: 100,
                 color: Colors.blue,
-                child: Icon(Icons.add, color: Colors.white,),
+                child: const Icon(Icons.add, color: Colors.white,),
               ),
             ),
           ],
