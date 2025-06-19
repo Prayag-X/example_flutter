@@ -25,11 +25,19 @@ class _HomePageState extends State<HomePage> {
               _count.toString(),
               style: TextStyle(fontSize: 60),
             ),
-            Container(
-              height: 40,
-              width: 100,
-              color: Colors.blue,
-              child: Icon(Icons.add, color: Colors.white,),
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  _count++;
+                });
+                print(_count);
+              },
+              child: Container(
+                height: 40,
+                width: 100,
+                color: Colors.blue,
+                child: Icon(Icons.add, color: Colors.white,),
+              ),
             ),
           ],
         ),
